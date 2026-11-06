@@ -1,0 +1,158 @@
+
+:host {
+  display: block;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 6%;
+  background: #f3f6f7;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+
+
+.eyebrow {
+  color: #416f83;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  margin: 1rem 0;
+  color: #19323d;
+}
+
+.hero-content h1 span {
+  color: #416f83;
+}
+
+.hero-content h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 500;
+  color: #19323d;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #53636b;
+}
+
+
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.btn-primary {
+  background: #416f83;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #19323d;
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  border: 1px solid #416f83;
+  color: #416f83;
+}
+
+.btn-secondary:hover {
+  background: #416f83;
+  color: white;
+}
+
+
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  width: min(100%, 350px);
+  aspect-ratio: 1;
+  background: #416f83;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 25px 60px rgba(25, 50, 61, 0.18);
+}
+
+.logo-container img {
+  width: 75%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 70px 6%;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .logo-container {
+    width: 200px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-description {
+    margin: 0 auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+}

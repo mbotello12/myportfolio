@@ -1,0 +1,53 @@
+<section id="contact" class="section contact-section">
+  <div class="container">
+
+    <div class="contact-card">
+
+      <div class="contact-content">
+        <span class="eyebrow">LET'S CONNECT</span>
+
+        <h2>
+          Have a problem worth
+          <span>solving?</span>
+        </h2>
+
+        <p class="contact-description">
+          I'm always interested in connecting with people who are
+          building meaningful things. Whether it's a software
+          opportunity, a collaboration, or just a conversation
+          about technology, I'd love to hear from you.
+        </p>
+
+        <a
+          class="contact-email-button"
+          [href]="'mailto:' + email"
+        >
+          <span>Get in Touch</span>
+          <span class="email-arrow">↗</span>
+        </a>
+
+        
+      </div>
+
+      <div class="contact-links">
+        <span class="links-heading">FIND ME ONLINE</span>
+
+        <a
+          *ngFor="let link of socialLinks"
+          class="social-link"
+          [href]="link.url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <h3>{{ link.label }}</h3>
+            <p>{{ link.description }}</p>
+          </div>
+
+          <span class="social-arrow">↗</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
