@@ -1,0 +1,140 @@
+
+<section id="work" class="section featured-section">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">WHAT I'VE BEEN BUILDING</span>
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-subtitle">
+        From solving real-world problems with software to building
+        digital experiences for businesses.
+      </p>
+    </div>
+
+    <!-- Featured Project -->
+    <div class="work-group">
+      <div class="group-heading">
+        <div>
+          <span class="eyebrow">01 / ENGINEERING</span>
+          <h3>Projects</h3>
+        </div>
+        <p>Applications, systems, and solutions built through code.</p>
+      </div>
+
+      <article class="featured-project-card">
+        <div class="featured-project-image">
+          <img
+            [src]="featuredProject.image"
+            [alt]="featuredProject.name + ' application preview'"
+          />
+          <span class="image-label">Featured Project</span>
+        </div>
+
+        
+        <div class="featured-project-content">
+          <span class="project-category">
+            {{ featuredProject.category }}
+          </span>
+
+          <h3>{{ featuredProject.name }}</h3>
+
+          <p>{{ featuredProject.description }}</p>
+
+          <div class="tech-list">
+            <span *ngFor="let tech of featuredProject.technologies">
+              {{ tech }}
+            </span>
+          </div>
+
+          <div class="project-actions">
+              <a
+                *ngIf="featuredProject.links.github"
+                [href]="featuredProject.links.github"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link secondary-link"
+              >
+                <mat-icon>build</mat-icon>
+                GitHub
+              </a>
+          
+              <a
+                *ngIf="featuredProject.links.live"
+                [href]="featuredProject.links.live"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link primary-link"
+              >
+                Live Site
+                <mat-icon>call_made</mat-icon>
+              </a>
+            </div>
+        </div>
+      </article>
+
+      <!-- Additional Projects -->
+      <div class="project-grid">
+        <article
+          class="project-card"
+          *ngFor="let project of otherProjects"
+        >
+          <div class="project-card-image">
+            <img [src]="project.image" [alt]="project.name + ' preview'" />
+            <span class="status-label">{{ project.status }}</span>
+          </div>
+
+          <div class="project-card-content">
+            <span class="project-category">{{ project.category }}</span>
+            <h4>{{ project.name }}</h4>
+            <p>{{ project.description }}</p>
+
+            <div class="tech-list">
+              <span *ngFor="let tech of project.technologies">
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Client Websites -->
+    <div class="work-group client-work">
+      <div class="group-heading">
+        <div>
+          <span class="eyebrow">02 / CLIENT COLLABORATIONS</span>
+          <h3>Client Work</h3>
+        </div>
+        <p>Helping businesses establish and grow their online presence.</p>
+      </div>
+
+      <div class="client-grid">
+        <article class="client-card" *ngFor="let client of clientWebsites">
+          <a
+            class="client-image"
+            [href]="client.website"
+            target="_blank"
+            rel="noopener noreferrer"
+            [attr.aria-label]="'Visit ' + client.name"
+          >
+            <img [src]="client.image" [alt]="client.name + ' website preview'" />
+            <span class="visit-overlay">Visit Website ↗</span>
+          </a>
+
+          <div class="client-content">
+            <span class="project-category">{{ client.category }}</span>
+            <h4>{{ client.name }}</h4>
+            <p>{{ client.description }}</p>
+
+            <div class="tech-list">
+              <span *ngFor="let tech of client.technologies">
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </div>
+</section>
