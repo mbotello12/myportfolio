@@ -1,0 +1,96 @@
+
+<section class="work-hero">
+  <div class="container">
+    <div class="work-hero-content">
+      <span class="section-eyebrow">OUR WORK</span>
+
+      <h1>
+        Built for businesses.
+        <span>Designed to make a difference.</span>
+      </h1>
+
+      <p>
+        Every business has a different story, different needs, and different
+        goals. Here's a look at some of the projects we've brought to life
+        through practical digital solutions.
+      </p>
+
+      <a routerLink="/contact" class="btn btn-primary">
+        Let's Talk About Your Project
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="work-projects section">
+  <div class="container">
+    <div class="work-section-heading">
+      <div>
+        <span class="section-eyebrow">SELECTED PROJECTS</span>
+        <h2>Real businesses. Real solutions.</h2>
+      </div>
+
+      <p>
+        From establishing an online presence to creating better ways for
+        customers to connect, every project starts with what the business needs.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      @for (project of projects; track project.name) {
+        <article class="project-card">
+          <div class="project-image">
+            <img [src]="project.image" [alt]="project.name + ' website preview'">
+
+            <span class="project-category">
+              {{ project.category }}
+            </span>
+          </div>
+
+          <div class="project-content">
+            <h3>{{ project.name }}</h3>
+
+            <p>{{ project.description }}</p>
+
+            <div class="project-services">
+              @for (service of project.services; track service) {
+                <span>{{ service }}</span>
+              }
+            </div>
+
+            @if (project.url) {
+              <a
+                [href]="project.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+              >
+                Visit Website <span>↗</span>
+              </a>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="work-cta">
+  <div class="container">
+    <div class="work-cta-content">
+      <span class="section-eyebrow">YOUR PROJECT COULD BE NEXT</span>
+
+      <h2>Have a business to build?</h2>
+
+      <p>
+        Whether you need a website, a better way to capture leads, or help
+        simplifying everyday work, let's talk about what would make the
+        biggest difference for your business.
+      </p>
+
+      <a routerLink="/contact" class="btn btn-primary">
+        Start a Conversation
+      </a>
+    </div>
+  </div>
+</section>

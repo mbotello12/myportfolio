@@ -1,0 +1,175 @@
+
+<section class="contact-hero">
+  <div class="container">
+    <span class="eyebrow">LET'S START A CONVERSATION</span>
+    <h1>Tell me a little about your business.</h1>
+    <p>
+      Whether you need a new website, want to improve how customers find you,
+      or have an idea for making your day-to-day work easier, I'd love to hear
+      about it.
+    </p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container contact-layout">
+
+    <div class="contact-intro">
+      <span class="eyebrow">GET IN TOUCH</span>
+      <h2>Let's figure out what would make the biggest difference.</h2>
+      <p>
+        You don't need to have everything figured out before reaching out.
+        Tell me what you're working on, what's not working, or what you'd
+        like to improve. We can take it from there.
+      </p>
+
+      <div class="contact-details">
+        <div class="contact-detail">
+          <div class="detail-icon">
+            <span>&#64;</span>
+          </div>
+          <div>
+            <span class="detail-label">EMAIL</span>
+            <a href="mailto:bot.Ellodev@gmail.com">
+              bot.Ellodev&#64;gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="detail-icon">
+            <span>↗</span>
+          </div>
+          <div>
+            <span class="detail-label">WHAT HAPPENS NEXT?</span>
+            <p>
+              I'll review your message and get back to you to discuss your
+              goals and possible next steps.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-note">
+        <strong>No pressure. No complicated sales process.</strong>
+        <p>
+          Just a conversation about your business and where technology
+          might be able to help.
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-form-card">
+      <div class="form-heading">
+        <span class="eyebrow">YOUR PROJECT</span>
+        <h2>How can I help?</h2>
+        <p>Share a few details and I'll be in touch.</p>
+      </div>
+
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact">
+
+        <p class="hidden-field">
+          <label>
+            Don't fill this out:
+            <input name="bot-field">
+          </label>
+        </p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your name *</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address *</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="business">Business name</label>
+          <input
+            id="business"
+            name="business"
+            type="text"
+            placeholder="Your business name"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="service">What are you looking for?</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Select a service</option>
+            <option value="Website Design & Development">
+              Website Design & Development
+            </option>
+            <option value="Google Visibility & Local SEO">
+              Google Visibility & Local SEO
+            </option>
+            <option value="Lead Capture & Booking">
+              Lead Capture & Booking
+            </option>
+            <option value="Business Automation & Support">
+              Business Automation & Support
+            </option>
+            <option value="Not sure yet">Not sure yet</option>
+            <option value="Something else">Something else</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell me a little about your project *</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="What are you looking to accomplish? What's working, what's not, or what would you like to improve?"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary form-submit">
+          Send My Message <span>→</span>
+        </button>
+
+        <p class="form-disclaimer">
+          Your information is only used to respond to your inquiry.
+        </p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-bottom">
+  <div class="container">
+    <span class="eyebrow">NOT SURE WHERE TO START?</span>
+    <h2>That's perfectly okay.</h2>
+    <p>
+      Sometimes the best place to start is simply explaining what's going on.
+      We'll work through the rest together.
+    </p>
+    <a routerLink="/services" class="btn btn-secondary">
+      Explore Services
+    </a>
+  </div>
+</section>
