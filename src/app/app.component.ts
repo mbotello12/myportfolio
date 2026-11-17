@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { HeroComponent } from '../components/hero/hero.component';
-import { StoryComponent } from '../components/story/story.component';
-import { FeaturedComponent } from '../components/featured/featured.component';
-import { SkillsComponent } from '../components/skills/skills.component';
-import { ContactComponent } from '../components/contact/contact.component';
+import { FooterComponent } from './core/layout/footer/footer.component';
+import { HeaderComponent } from './core/layout/header/header.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [HeroComponent, StoryComponent, FeaturedComponent, SkillsComponent, ContactComponent],
+  standalone: true,
+  imports: [ HeaderComponent, RouterOutlet, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

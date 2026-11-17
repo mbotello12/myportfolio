@@ -1,0 +1,68 @@
+
+<header class="site-header">
+  <div class="container header-container">
+
+    <!-- Brand -->
+    <a routerLink="/" class="brand" (click)="closeMenu()">
+      <span class="brand-name">bot<span class="brand-dot">.</span>Ello</span>
+      <span class="brand-subtitle">DEVELOPMENT</span>
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <button
+      class="menu-toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Toggle navigation menu">
+
+      <span [class.active]="isMenuOpen"></span>
+      <span [class.active]="isMenuOpen"></span>
+      <span [class.active]="isMenuOpen"></span>
+
+    </button>
+
+    <!-- Navigation -->
+    <nav class="main-nav" [class.open]="isMenuOpen">
+
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()">
+        Home
+      </a>
+
+      <a
+        routerLink="/services"
+        routerLinkActive="active"
+        (click)="closeMenu()">
+        Services
+      </a>
+
+      <a
+        routerLink="/work"
+        routerLinkActive="active"
+        (click)="closeMenu()">
+        Our Work
+      </a>
+
+      <a
+        routerLink="/about"
+        routerLinkActive="active"
+        (click)="closeMenu()">
+        About
+      </a>
+
+      <a
+        routerLink="/contact"
+        class="nav-cta"
+        (click)="closeMenu()">
+        Let's Talk
+        <span aria-hidden="true">→</span>
+      </a>
+
+    </nav>
+
+  </div>
+</header>
