@@ -37,11 +37,7 @@
   margin-bottom: 28px;
 }
 
-.eyebrow-line {
-  width: 30px;
-  height: 2px;
-  background: var(--color-primary);
-}
+
 
 .hero h1 {
   max-width: 650px;
@@ -81,11 +77,6 @@
   margin-top: 38px;
 }
 
-.trust-line {
-  width: 25px;
-  height: 1px;
-  background: var(--color-muted);
-}
 
 .hero-trust p {
   color: var(--color-muted);
