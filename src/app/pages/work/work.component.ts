@@ -29,15 +29,6 @@ export class WorkComponent {
       url: 'https://diamondcoatss.com'
     },
     {
-      name: 'J&R Land Services',
-      category: 'Business Website',
-      description:
-        "A refreshed online presence that brings J&R's tree services, lawn care, and land improvements together in one organized experience. Built with mobile users in mind, the website makes it easier for customers to explore services and connect with a local, owner-operated business.",
-      image: 'assets/images/clients/jr-land-services.png',
-      services: ['Website Design', 'Service Organization', 'Mobile Experience'],
-      url: ''
-    },
-    {
       name: 'Velvet Pumpkin Portraits',
       category: 'Photography Website',
       description:
@@ -72,6 +63,15 @@ export class WorkComponent {
       image: 'assets/images/clients/victory-barbershop.png',
       services: ['Website Design', 'Appointment Booking', 'Setmore Integration'],
       url: 'https://victorybarberllc.com'
+    },
+    {
+      name: 'J&R Land Services',
+      category: 'In Production',
+      description:
+        "A refreshed online presence that brings J&R's tree services, lawn care, and land improvements together in one organized experience. Built with mobile users in mind, the website makes it easier for customers to explore services and connect with a local, owner-operated business.",
+      image: 'assets/images/clients/jr-land-services.png',
+      services: ['Website Design', 'Service Organization', 'Mobile Experience'],
+      url: ''
     }
   ];
 }
